@@ -100,4 +100,10 @@ Paste_Image.png
 $git push
 fatal: unable to access 'https://github.com/cystone/advancedSingleCell.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 
+```bash
 git config --global --unset http.proxy
+git config --global http.sslVerify false
+```
+
+
+
