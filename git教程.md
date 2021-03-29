@@ -4,26 +4,18 @@
 
 在`windows`系统下，选择`Tools` --> `Global Options`，然后选择`Git/SVN`，选择`Git executable`，所以安装前提是你要有先安装`Git`，如下图所示
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-ece69d10fb81a5c9.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
+![image-20210329122736942](https://gitee.com/cystone2020/document/raw/master/image-20210329122736942.png)
 
 选择git目录
 
 
  然后`Create RSA Key`
 
+![image-20210329122752182](https://gitee.com/cystone2020/document/raw/master/image-20210329122752182.png)
 
+![image-20210329122816918](https://gitee.com/cystone2020/document/raw/master/image-20210329122816918.png)
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-8d63af6b7503a58b.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
-
-形成秘钥
-
-![img](https:////upload-images.jianshu.io/upload_images/1716465-1519d51fc1df9b02.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
-
-复制公钥
-
-![img](https:////upload-images.jianshu.io/upload_images/1716465-60edf2cf8c934e5f.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
-
-登陆github，添加秘钥
+![image-20210329122840750](https://gitee.com/cystone2020/document/raw/master/image-20210329122840750.png)
 
 打开`Tools`，选择`shell`，输入命令：
  `git config --global user.email "youremail@gmail.com`
@@ -31,35 +23,31 @@
  `ssh -T git@github.com`
  使用`GitHub`上的名字
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-e8fee9dafefbfdc8.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
-
-GitHub连接
+![image-20210329122854117](https://gitee.com/cystone2020/document/raw/master/image-20210329122854117.png)GitHub连接
 
 ## 新建一个一个工程
 
 新建一个工程，选择`New Directory`
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-099c9c7de5c507d7.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
+![image-20210329122906337](https://gitee.com/cystone2020/document/raw/master/image-20210329122906337.png)
 
 新建工程
 
 然后勾选`Create a git repository`
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-907891b9916d64ef.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
+![image-20210329122936787](https://gitee.com/cystone2020/document/raw/master/image-20210329122936787.png)
 
 创建Git
 
 这个时候`Rstudio`会出现`git`栏，提交到本地，只需要在`git`栏下面点击`commit`，即可提交至本地
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-40953fcbfc448ff6.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
-
-GitHub提交
+![image-20210329122958635](https://gitee.com/cystone2020/document/raw/master/image-20210329122958635.png)GitHub提交
 
 
 
 可以将代码保存至`GitHub`上，并且创建分支，在`GitHub`上创建一个`New respository`，命名为`test`
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-dc1a9c7624d2109f.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
+![image-20210329123014956](https://gitee.com/cystone2020/document/raw/master/image-20210329123014956.png)
 
 GitHUb上创建
 
@@ -81,7 +69,7 @@ git push  origin master
 
 首先在`Rstudio`上新建一个`project`，选择`version control`,然后选`Clone Git Respository`，将`GitHub`上`repository`的`url`加入到选项中
 
-![img](https:////upload-images.jianshu.io/upload_images/1716465-1e8cc2c8dfcaf26b.png?imageMogr2/auto-orient/strip|imageView2/2/w/456/format/webp)
+![image-20210329123033548](https://gitee.com/cystone2020/document/raw/master/image-20210329123033548.png)
 
 Paste_Image.png
 
@@ -104,3 +92,12 @@ Paste_Image.png
 链接：https://www.jianshu.com/p/aa9b22b429ee
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+## 常见错误和解决办法
+
+$git push
+fatal: unable to access 'https://github.com/cystone/advancedSingleCell.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+
+git config --global --unset http.proxy
