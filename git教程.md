@@ -80,20 +80,9 @@ Paste_Image.png
 
 在`git`的时候，我们会建立许多有特性的分支，建立分支的时候，如何使得远端也出现分支，需要用到下面的命令：
 
-
-
 ```bash
  git push --set-upstream origin master
 ```
-
-
-
-作者：cheng2pj
-链接：https://www.jianshu.com/p/aa9b22b429ee
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
 
 ## 常见错误和解决办法
 
