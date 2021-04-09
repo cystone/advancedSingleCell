@@ -10,3 +10,7 @@ for(i in wkPath){
   if (!dir.exists(wkPathi)) dir.create(wkPathi, recursive=T)
 }
 rm(list=c('i', 'wkPathi', 'wkPath'))
+
+# install.packages('devtools')
+# BiocManager::install("SeuratData")
+# remotes::install_github('satijalab/seurat-data')

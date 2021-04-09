@@ -73,7 +73,7 @@ pbmc <- FindClusters(pbmc, resolution = 0.5)
 pbmc <- RunUMAP(pbmc, dims = 1:10)
 set.seed(123)
 DimPlot(pbmc, reduction = "umap")
-saveRDS(pbmc, file = "./processData/X01_pbmc_tutorial.rds")
+saveRDS(pbmc, file = "./processData/01_pbmc_tutorial.rds")
 
 #-------聚类生物标志物--------
 # find all markers of cluster 1

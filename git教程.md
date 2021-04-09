@@ -56,8 +56,9 @@ GitHUb上创建
 
 
 ```csharp
-git remote add origin  https://github.com/chengfeifan/test.git
-git config remote.origin.url git@github.com:chengfeifan/test.git
+git remote rm origin
+git remote add origin  https://github.com/cystone/advancedSingleCell.git
+git config remote.origin.url git@github.com:cystone/advancedSingleCell.git
 git pull  origin master
 git push  origin master
 ```
@@ -93,6 +94,14 @@ fatal: unable to access 'https://github.com/cystone/advancedSingleCell.git/': Li
 git config --global --unset http.proxy
 git config --global http.sslVerify false
 ```
+
+如果有如下：
+Enter passphrase for key '～/.ssh/id_rsa': 
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
 
 
 
