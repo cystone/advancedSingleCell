@@ -11,6 +11,6 @@ for(i in wkPath){
 }
 rm(list=c('i', 'wkPathi', 'wkPath'))
 
-# install.packages('devtools')
+# install.packages('umap')
 # BiocManager::install("SeuratData")
 # remotes::install_github('satijalab/seurat-data')
