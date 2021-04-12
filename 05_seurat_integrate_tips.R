@@ -1,7 +1,17 @@
 library(Seurat)
 
-bm280k.data <- Read10X_h5("../data/ica_bone_marrow_h5.h5")
-bm280k <- CreateSeuratObject(counts = bm280k.data, min.cells = 100, min.features = 500)
+library(loomR)
+library(SeuratDisk)
+inFile = paste0('~/BioFiles/immuneCellAtlas/',
+                'cc95ff89-2e68-4a08-a234-480eca21ce79.homo_sapiens.loom')
+
+
+bm280k.loom <- connect(filename = inFile, mode = "r+")
+bm280k.loom
+bm280k =  as.Seurat(bm280k.loom)
+bm280k.loom$close_all()
+# bm280k.data <- Read10X_h5("../data/ica_bone_marrow_h5.h5")
+# bm280k <- CreateSeuratObject(counts = bm280k.data, min.cells = 100, min.features = 500)
 bm280k.list <- SplitObject(bm280k, split.by = "orig.ident")
 bm280k.list <- lapply(X = bm280k.list, FUN = function(x) {
   x <- NormalizeData(x, verbose = FALSE)
